@@ -1,4 +1,4 @@
-// emcc hello_world.c -o hello_world.html
+// emcc hello_sdl.c -o hello_sdl.html
 
 #include <stdio.h>
 #include <SDL/SDL.h>
