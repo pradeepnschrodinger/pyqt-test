@@ -4,6 +4,8 @@
 ### Compile cpython
 
 Clone emsdk and cpython. I put emsdk to `/opt` and cpython into `~/projects`.
+cypthon version used `52e0797f8e1c631eecf24cb3f997ace336f52271`.
+emsdk version used `350c19a36c3356b3202c108a68a20cd102bdc06b`.
 
 ```bash
 git clone https://github.com/python/cpython.git ~/projects/cpython
