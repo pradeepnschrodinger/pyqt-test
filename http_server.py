@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Run this with:
+#   python3 http_server.py 
 from http.server import HTTPServer, SimpleHTTPRequestHandler, test
 import sys
 
