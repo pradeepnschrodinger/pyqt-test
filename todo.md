@@ -15,3 +15,8 @@ Virtual file systems:
     * https://emscripten.org/docs/porting/files/packaging_files.html?highlight=embed#packaging-using-emcc
     * https://stackoverflow.com/questions/45535301/can-i-read-files-from-the-disk-by-using-webassembly
     * https://stackoverflow.com/questions/47313403/passing-client-files-to-webassembly-from-the-front-end
+
+Python modules/site packages in wasm:
+  * Do we embed all dependencies?
+  * What's the correct path?
+  * python -m modulefinder python_arch.py &> modules.txt
