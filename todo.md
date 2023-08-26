@@ -20,3 +20,7 @@ Python modules/site packages in wasm:
   * Do we embed all dependencies?
   * What's the correct path?
   * python -m modulefinder python_arch.py &> modules.txt
+  * how about bundling entire app into a single file
+    * -- https://github.com/Akrog/pinliner ? it seems broken though...
+    * pyinstaller also seems broken
+  * --embed-file local_file.py@/usr/local/lib/python3.13/local_file.py
