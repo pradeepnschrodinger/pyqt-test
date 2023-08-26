@@ -25,7 +25,7 @@ NOTE (pradeep)
 Py_NoSiteFlag (see https://docs.python.org/3/c-api/init.html):
 Disable the import of the module site and the site-dependent manipulations of sys.path that it entails. Also disable these manipulations if site is explicitly imported later (call site.main() if you want them to be triggered).
 */
-extern __declspec(dllimport) int Py_NoSiteFlag;
+// extern __declspec(dllimport) int Py_NoSiteFlag;
 
 int main(int argc, char **argv, char **envp) {
   char **s = environ;

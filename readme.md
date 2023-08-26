@@ -26,7 +26,7 @@ sudo make install
 
 Once this is done, we can move over to compiling programs in this repo.
 
-### Compile programs
+### Compile C programs
 C programs in this repo can be compiled to wasm using emcc.
 Each file has a comment block at the top showcasing the full command that can just be copy pasted and run.
 
@@ -36,6 +36,19 @@ emcc hello_sdl.c -o hello_sdl.html
 ```
 which'll output hello_sdl.html.
 Please use a local webserver to serve this file [^1]
+
+### Compile py scripts
+Python scripts can be transpiled to C using cython.
+First install cython using the previously built python (for wasm) at `~/projects/cpython/builddir/build`.
+```bash
+python -m pip install cython
+```
+Then pass the embed flag to cython
+```bash
+python -m cython --embed hello_world_py.py
+```
+
+This'll yield a C file which can be once again compiled to wasm via the steps outlined in the previous section.
 
 ### FAQ
 [^1]:
