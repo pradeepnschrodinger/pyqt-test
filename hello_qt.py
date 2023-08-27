@@ -13,10 +13,12 @@ print ("hello world from qt!")
 
 from PyQt5 import QtWidgets
 
+print ("qt imported fine!")
+
 app = QtWidgets.QApplication([])
 btn = QtWidgets.QPushButton("This is a button")
 
 btn.show()
 app.exec()
 
-print ("qt app should be running now!")
+print ("qt app exited!")

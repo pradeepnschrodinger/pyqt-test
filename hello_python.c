@@ -1,5 +1,6 @@
 // gcc hello_python.c $(python3-config --includes --embed) $(python3-config --libs --embed) $(python3-config --ldflags --embed) -v &> gcc.log
 // gcc hello_python.c -I/home/pradeep/projects/cpython/Include -I/home/pradeep/projects/cpython/builddir/build $(python-config --cflags --embed) $(python-config --ldflags --embed) $(python-config --libs --embed) $(python-config --includes --embed) &> gcc.log
+// gcc hello_python.c $(python3-config --includes --embed) $(python3-config --ldflags --embed) $(python3-config --libs --embed) $(python3-config --cflags --embed) -rdynamic &> gcc.log
 
 // /opt/emsdk/emsdk activate latest
 // source "/opt/emsdk/emsdk_env.sh"
