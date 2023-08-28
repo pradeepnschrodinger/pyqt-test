@@ -12,6 +12,13 @@
 
 # emcc hello_qt.c --pre-js ModuleSettings.js -o a.html $(python3-config --includes --embed) -L/home/pradeep/projects/cpython/builddir/emscripten-node-dl $(python3-config --libs --embed) /home/pradeep/projects/cpython/builddir/emscripten-node-dl/Modules/_decimal/libmpdec/libmpdec.a ../cpython/builddir/emscripten-node-dl/Modules/_hacl/libHacl_Hash_SHA2.a ../cpython/builddir/emscripten-node-dl/Modules/expat/libexpat.a /opt/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libsqlite3-mt.a -lz -lbz2 -v -static -Wl,-static  --embed-file /usr/local/lib/python3.13/ --embed-file env/lib/python3.13/site-packages@/usr/local/lib/python3.13/site-packages -fdeclspec -s INITIAL_MEMORY=550MB 
 
+### with node raw FS
+# emcc hello_qt.c $(python3-config --includes --embed) $(python3-config --ldflags --embed) $(python3-config --libs --embed) $(python3-config --cflags --embed) /home/pradeep/projects/cpython/builddir/emscripten-node-dl/Modules/_decimal/libmpdec/libmpdec.a ../cpython/builddir/emscripten-node-dl/Modules/_hacl/libHacl_Hash_SHA2.a ../cpython/builddir/emscripten-node-dl/Modules/expat/libexpat.a /opt/emsdk//upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/pic/libsqlite3.a -lz -lbz2 -rdynamic  -lnodefs.js -lnoderawfs.js &> emcc.log 
+
+# emcc hello_qt.c $(python3-config --includes --embed) $(python3-config --ldflags --embed) $(python3-config --libs --embed) $(python3-config --cflags --embed) /home/pradeep/projects/cpython/builddir/emscripten-node-dl/Modules/_decimal/libmpdec/libmpdec.a ../cpython/builddir/emscripten-node-dl/Modules/_hacl/libHacl_Hash_SHA2.a ../cpython/builddir/emscripten-node-dl/Modules/expat/libexpat.a /opt/emsdk//upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/pic/libsqlite3.a /opt/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/pic/libz.a /opt/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/pic/libbz2.a -rdynamic  -lnodefs.js -lnoderawfs.js &> emcc.log 
+
+# emcc hello_qt.c -I/usr/local/include/python3.13 -I/usr/local/include/python3.13 -L/usr/local/lib/python3.13/config-3.13-wasm32-emscripten -L/usr/local/lib -lpython3.13 -ldl  -lpthread -lm
+
 print ("hello world from qt!")
 
 import sys

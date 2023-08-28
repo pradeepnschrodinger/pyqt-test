@@ -24,3 +24,17 @@ Python modules/site packages in wasm:
     * -- https://github.com/Akrog/pinliner ? it seems broken though...
     * pyinstaller also seems broken
   * --embed-file local_file.py@/usr/local/lib/python3.13/local_file.py
+
+Dynamic Linking Wasm:
+ * Why does dynamic linking (.so files) fail when program is run in webassembly?
+```
+dlopen dynamic linking not enabled. File={/home/pradeep/projects/pyqt-test/env/lib/python3.13/site-packages/PyQt5/QtWidgets.abi3.so}, flags={2}Traceback (most recent call last):
+  File "hello_qt.py", line 21, in init hello_qt
+    sys.path.insert(0,'env/lib/python3.13/site-packages')
+ImportError: niranjan dlopen dynamic linking not enabled
+``````
+ * Checkout -sALLOW_UNIMPLEMENTED_SYSCALLS=0 (https://github.com/emscripten-core/emscripten/issues/15670) https://vscode.dev/github/emscripten-core/emsdk/blob/main/upstream/emscripten/ChangeLog.md#L54
+
+ * Build pyqt5 from source
+  * use emsdk?
+  * configure with -static 

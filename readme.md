@@ -57,3 +57,12 @@ You can use python's builtin feature to host a server locally via
 ```bash
 python3 http_server.py
 ```
+
+#### Cython Errors:
+I get errors while compiling C files output by Cython due to an incorrect '_PyVectorcall_Function' call.
+There's a stupid typo in Cython source code where PY_VERSION_HEX is incorrectly spelled as Py_VERSION_HEX.
+Fix this by just locating the error with
+```bash
+grep -rnw . -e '_PyVectorcall_Function' 
+```
+and then changing to the correct case.
