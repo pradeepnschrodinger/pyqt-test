@@ -22,10 +22,12 @@
 print ("hello world from qt!")
 
 import sys
+# sys.path.insert(0,'/home/pradeep/.local/lib/python3.10/site-packages')
+sys.path.insert(0,'/usr/local/lib/python3.10/dist-packages/')
 sys.path.insert(0,'env/lib/python3.13/site-packages')
 print ("sys.path = %s", sys.path)
 
-from PyQt5 import QtWidgets
+from PyQt6 import QtWidgets
 
 print ("qt imported fine!")
 
