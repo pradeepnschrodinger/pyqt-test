@@ -1,3 +1,5 @@
+// /opt/emsdk/emsdk activate latest
+// source "/opt/emsdk/emsdk_env.sh"
 // emcc hello_sdl.c -o hello_sdl.html
 
 #include <stdio.h>
